@@ -11,10 +11,31 @@
         html{
             font-family: Roboto, Arial;
         }
+        body{
+            height: 100%;
+            width: 100%;
+            background-image: url("crud.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            overflow-x : hidden;
+            overflow-y: hidden;
+        }
+        .bx{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            height:300px;
+            width:400px;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Login Form</h1>
+    <div class="bx">
+        <h1>Login Form</h1>
         <div>
             <label>Name :</label>
             <input type="text" name="username" placeholder="Name" required>
@@ -25,7 +46,7 @@
         </div>
         <button id="submit">Login</button>
         <p class="bottom">Dont't have an account?  <a class="bottom" href="ets_register.html"> Register here</a></p>
-
+    </div>
         <script>
             const submit = document.getElementById("submit");
             submit.addEventListener("click", () => {
