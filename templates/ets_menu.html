@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        p, a{
+                font-family: Inter, Arial;
+                color : white;
+            }   
+        .nav{
+            padding-top: 19px;
+            text-align: right;
+            margin-right: 185px;
+        } 
+        .btn{
+            padding: 6px;
+            background-color: none;
+            font-size: 18px;
+            margin-left: 35px;
+            margin-right: 35px;
+            font-weight: 500;
+            text-decoration:none;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-image: url("menu.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            overflow-x : hidden;
+        }
+        .vid_img{
+            margin-bottom: 12px;
+        }
+        .preview{
+            width : 300px;
+            height : 300px;
+            margin-right: 12px;
+            vertical-align: top;
+            background-color: white;
+            border-radius: 25px;
+            display : inline-block;
+        }
+        .thumbnail{
+            width : 300px;
+            display : block;
+            border-radius: 10px;
+            height:187.5px;
+        }
+        .title{
+            margin-top: 0px;
+            font-weight: 700;
+        }
+        .author,.data{
+            display : block;
+            color : white;
+            font-weight : 500;
+            margin-bottom: 0;
+        }
+        .purchase{
+            border-radius: 5px;
+            color:white;
+            font-family: Inter,Arial;
+            font-weight: 700;  
+            font-size: 26px;
+            height:90px;
+            width:150px;          
+        }
+        .smol{
+            width : 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="ets_home.html"  class="btn">Home</a>
+        <a href="ets_menu.html"  class="btn">Menu</a>
+        <a href="ets_prof.html" class="btn">Profile</a>
+    </div>
+    <div style="font-weight:600;
+                font-size : 30px;
+                margin-left: 610px;
+                padding-left: 76px;
+                padding-top: 90px;
+                width : 500px;
+                display : inline-block;
+                margin-bottom: 35px;">
+        <p>Our Menu</p>
+    </div>
+
+    <div style="margin-left: 265px;
+                margin-right: 65px;">
+        <div class = "preview">
+            <div class = "vid_img">
+                <img class="thumbnail" src="cappucino.webp">
+            </div>
+            <div style="margin-left: 10px;">
+                <p class = "title", style="color:black;">
+                    Cappucino Classic
+                </p>
+                <p class = "author", style="color:black;">Rp 17.000</p>
+            </div>
+            <div style="margin-top: 5px;
+                        margin-left: 220px;">
+                
+                <btn id="pos"><img class="smol"src="plus.jpg"></btn>
+                <btn id="min"><img class="smol"src="minus.jpg"></btn>
+            </div>
+        </div>
+
+        <div class = "preview">
+            <div class = "vid_img">
+                <img class="thumbnail" src="espresso.jpg">
+            </div>
+            <div style="margin-left: 10px;">
+                <p class = "title", style="color:black;">
+                    Espresso
+                </p>
+                <p class = "author", style="color:black;">Rp 17.000</p>
+            </div>
+            <div style="margin-top: 5px;
+                        margin-left: 220px;">
+                
+                <btn id="pos"><img class="smol"src="plus.jpg"></btn>
+                <btn id="min"><img class="smol"src="minus.jpg"></btn>
+            </div>
+        </div>
+
+        <div class = "preview">
+            <div class = "vid_img">
+                <img class="thumbnail" src="latte.jpg">
+            </div>
+            <div style="margin-left: 10px;">
+                <p class = "title", style="color:black;">
+                    Latte
+                </p>
+                <p class = "author", style="color:black;">Rp 17.000</p>
+            </div>
+            <div style="margin-top: 5px;
+                        margin-left: 220px;">
+                
+                <btn id="pos"><img class="smol"src="plus.jpg"></btn>
+                <btn id="min"><img class="smol"src="minus.jpg"></btn>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 53px;
+                margin-left: 657px;">
+        <btn class="purchase">Finish order</btn>
+        <p>Total Price: <span id="total-price">Rp 0</span></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
