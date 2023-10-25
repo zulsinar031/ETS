@@ -68,9 +68,6 @@ def login():
 
 @app.route("/logout")
 def logout():
-    #session.pop("loggedin", None)
-    #session.pop("user_id", None)
-    #session.pop("user_email", None)
     session.clear()
     return redirect(url_for("ets_login"))
 
