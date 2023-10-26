@@ -1,15 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from flask_mysqldb import MySQL
-import MySQLdb.cursors
 import hashlib
 import json
 
 app = Flask(__name__)
 
-app.config["MYSQL_HOST"] = "localhost"
-app.config["MYSQL_USER"] = "root"
-app.config["MYSQL_PASSWORD"] = ""
-app.config["MYSQL_DB"] = "ets_db"
+app.config["MYSQL_HOST"] = "mysql0.serv00.com"
+app.config["MYSQL_USER"] = "m8357_zul"
+app.config["MYSQL_PASSWORD"] = "Izzulsinar31"
+app.config["MYSQL_DB"] = "m8357_ets_db"
 
 app.secret_key = "xyz"
 
@@ -23,6 +22,19 @@ def check_user_exists(cursor, username):
     else:
         return True
 
+@app.route("/test")
+def test():
+  cur = mysql.connection.cursor()
+  cur.execute("""SELECT * FROM user""")
+  mysql.connection.commit()
+  user = cur.fetchone()
+  cur.close()
+  
+  return str(user)
+  
+@app.route("/")
+def idx():
+  return render_template("index.html")
 
 @app.route("/ets_home")
 def home():
