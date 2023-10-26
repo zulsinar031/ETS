@@ -43,7 +43,14 @@ def home():
     else:
         return redirect(url_for("ets_login"))
 
+@app.route("/ets_menu")
+def menu():
+  return render_template("ets_menu.html")
 
+@app.route("/ets_prof")
+def prof():
+  return render_template("ets_prof.html")
+  
 @app.route("/ets_login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
